@@ -34,4 +34,4 @@ Vue Versão 3
 > cp .env.example .env
 
 ### Desenvolvido por:
-Equipe Front-end fintools
+Eduardo Neves
