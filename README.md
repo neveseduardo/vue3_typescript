@@ -1,7 +1,3 @@
-<p align="center">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQIAOtqQ5is5vwbcEn0ZahZfMxz1QIeAYtFfnLdkCXu1sqAGbnX" width="300">
- </p>
-
 # Boilerplate-vue3-typescript
 
 ### Desenvolvido em:

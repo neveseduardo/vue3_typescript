@@ -1,9 +1,12 @@
 {
   "name": "boilerplate-vue3-typescript",
   "version": "0.1.0",
-  "author": "fintools",
-  "description": "Template vue3 + typescript para projetos fintools.",
-  "license": "UNLICENSED",
+  "author": { 
+    "name": "Eduardo Neves",
+    "email": "neveseduardoti@gmail.com"
+  },
+  "description": "Template vue3 + typescript para projetos avulsos.",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
