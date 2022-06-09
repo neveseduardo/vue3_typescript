@@ -1,26 +1,48 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import DashboardLayout from '@/layouts/Dashboard/DashboardLayout.vue'
+import NProgress from 'nprogress'
+
+const files = require.context('./modules', false, /\.ts$/)
+const modules = files
+    .keys()
+    .map((m) => files(m))
+    .map((m) => m.default)
+    .reduce((acc, item) => [...acc, ...item], [])
 
 const routes: Array<RouteRecordRaw> = [
-  {
-    path: "/",
-    name: "home",
-    component: HomeView,
-  },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
-];
+    {
+        path: '',
+        redirect: '/dashboard',
+        component: DashboardLayout,
+        children: [
+            {
+                path: 'dashboard',
+                component: () => import('@/views/Dashboard/Dashboard.vue'),
+                name: 'Dashboard',
+                meta: { title: 'Dashboard' },
+            },
+        ],
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        meta: { auth: false },
+        component: () => import('@/views/Errors/NotFound.vue'),
+    },
+    ...modules,
+]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes,
-});
+    history: createWebHistory(process.env.BASE_URL),
+    routes,
+})
+const TIMEOUT = 100
+router.beforeEach((to, from, next) => {
+    NProgress.start()
+    setTimeout(() => {
+        return next()
+    }, TIMEOUT)
+})
+router.afterEach(() => NProgress.done())
 
-export default router;
+export default router

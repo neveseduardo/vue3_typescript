@@ -1,0 +1,45 @@
+$fonts_path: './webfonts/';
+$navbar-footer-height: 80px;
+$opened-sidebar-width: 250px;
+$closed-sidebar-width: 88px;
+$small-font: 0.8rem;
+
+:root {
+    // --primary-color: #695cfe;
+    --primary-color: #d40000;
+    // --primary-color: #007BFF;
+    --success-color: #08cd62;
+    --danger-color: #e22849;
+    --warning-color: #e6a23c;
+    --info-color: #68b3c8;
+    --link-color: #007bff;
+    --default-color: #c2c2c2;
+	--white-color: #FFF;
+	--black-color: #000;
+
+    --body-bg: #e4e9f7;
+    --cards-bg: #fff;
+    --scrollbar-bg: #dedede;
+    --scrollbar-thumb-bg: #fff;
+    --sidebar-color: #fff;
+    --primary-color-light: #f6f5ff;
+    --toggle-color: #ddd;
+    --text-color: #333;
+
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+
+
+body.dark {
+    --body-bg: #18191a;
+    --cards-bg: #242526;
+    --scrollbar-bg: #333;
+    --scrollbar-thumb-bg: #dedede;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --text-color: #fbfbfb;
+}

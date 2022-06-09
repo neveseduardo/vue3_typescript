@@ -1,29 +1,41 @@
-# vue3_typescript2
+<p align="center">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQIAOtqQ5is5vwbcEn0ZahZfMxz1QIeAYtFfnLdkCXu1sqAGbnX" width="300">
+ </p>
 
-## Project setup
-```
-yarn install
-```
+# Boilerplate-vue3-typescript
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+### Desenvolvido em:
+Vue Versão 3
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## Instalando as dependências
 
-### Run your unit tests
-```
-yarn test:unit
-```
+> yarn install
+>
+> npm install
 
-### Lints and fixes files
-```
-yarn lint
-```
+### Compilar e mimificar para produção
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+> yarn build
+>
+> npm run build
+
+### Executar testes unitários
+
+> yarn test:unit
+> 
+> npm run test:unit
+
+### Atualizar componentes (Em desenvolvimento)
+### Rodar projeto em dev
+
+>yarn run serve
+>
+>npm run serve
+
+
+
+### Criar arquivo '.env' com base no '.env.example' e configura-lo
+> cp .env.example .env
+
+### Desenvolvido por:
+Equipe Front-end fintools
